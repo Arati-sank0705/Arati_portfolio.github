@@ -1,0 +1,325 @@
+/* GOOGLE FONT (ADD LINK IN HTML HEAD) */
+/* Montserrat already used */
+
+/* BODY */
+body {
+    background: #1d0365;
+    color: #e2e8f0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* LOGO (ARATI) */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    background: linear-gradient(90deg, #e3e9ec, #e9e9f4, #e4e2eb);
+    background-size: 200%;
+
+    /* Standard property */
+    background-clip: text;
+
+    /* Webkit support */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    color: transparent; /* fallback */
+
+    animation: glowText 4s linear infinite;
+}
+/* LOGO ANIMATION */
+@keyframes glowText {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+.name {
+    font-size: 50px;
+    font-weight: 800;
+    color:  #ffffff;
+
+    text-shadow:
+        0 0 8px rgba(96, 165, 250, 0.4),
+        0 0 16px rgba(96, 165, 250, 0.25);
+}
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: rgba(56,189,248,0.2);
+    color: #38bdf8;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+/* HERO */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:130px;
+    min-height:80vh;   /* Add this */
+    position:relative;
+    z-index:1;
+}
+
+/* HERO ANIMATED BACKGROUND */
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle,
+        rgba(255,255,255,0.1) 1px,
+        transparent 1px);
+    background-size:40px 40px;
+    animation:moveBg 20s linear infinite;
+    pointer-events:none;
+    z-index:-1;   /* Add this */
+}
+.hero-left,
+.hero-right{
+    position:relative;
+    z-index:2;
+}
+@keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-200px,-200px); }
+}
+.quick-links{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.link-box{
+    background:#074699;
+    border-radius:10px;
+    min-width:150px;
+    text-align:center;
+    transition:0.3s;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.link-box h5 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.link-box a{
+    display:block;
+    width:100%;
+    height:100%;
+    padding:18px;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+.link-box:hover{
+    transform:translateY(-3px);
+    background:#1c1c1c;
+}
+/* PROFILE IMAGE */
+.profile-img-rect {
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #7C3AED;
+
+    box-shadow:
+        0 0 15px rgba(124, 58, 237, 0.25);
+}
+
+.profile-img-rect:hover {
+    transform: scale(1.08);
+}
+/* LINKS */
+.link {
+    color: #cbd5f5;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #38bdf8;
+    text-shadow: 0 0 10px #38bdf8;
+}
+
+/* SECTION */
+.section {
+    padding: 70px 0;
+}
+
+/* HEADINGS */
+h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #6366f1;
+    display: block;
+    margin-top: 8px;
+}
+/* EDUCATION FLEXBOX */
+.edu-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+/* SQUARE CARDS WITH PINK BORDER */
+.edu-card {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #dc0fdc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+/* HOVER EFFECT */
+.edu-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #ff4da6;
+}
+.project-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.project-desc {
+    font-size: 14px;
+    color: #cbd5f5;
+}
+/* CARDS */
+.card {
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+/* CARD HOVER */
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(99,102,241,0.4);
+}
+
+/* SKILLS */
+.skills {
+     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.skills span {
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    border-radius: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(56,189,248,0.6);
+}
+
+/* CERTIFICATE */
+.cert-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.cert-img:hover {
+    transform: scale(1.08);
+}
+
+/* BUTTON */
+.btn-light {
+    background: linear-gradient(to right, #38bdf8, #6366f1);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-light:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(99,102,241,0.7);
+}
+
+/* INPUT */
+input, textarea {
+    background: rgba(255,255,255,0.08) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #020617;
+    color: #94a3b8;
+}
+
+/* SCROLLBAR (COOL EXTRA 🔥) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 10px;
+}
+.contact-text {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #38bdf8;
+}
+.phone-number {
+    color: #38bdf8;
+    font-weight: 600;
+}
